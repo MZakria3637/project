@@ -1,0 +1,10 @@
+<div style="padding: 20px;">
+    <ul class="nav nav-sidebar">
+        <li *ngFor="let menuItem of menuItems" [ngClass]="{'active': menuItem.isActive}">
+            <a [routerLink]='[menuItem.url]'>
+                <i class="fa fa-{{menuItem.icon}}"></i>
+                {{menuItem.text}}
+            </a>
+        </li>
+    </ul>
+</div>
