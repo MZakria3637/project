@@ -7,6 +7,14 @@ const LayoutRoutes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'calendar',
+    loadChildren: () => import('src/app/calendar/calendar.module').then(m => m.CalendarModule)
+  },
+  {
+    path: 'cases',
+    loadChildren: () => import('src/app/cases/cases.module').then(m => m.CasesModule)
   }
 ]
 

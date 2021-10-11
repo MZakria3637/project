@@ -10,18 +10,16 @@ import { LayoutModule } from './shared/layout/layout.module';
 import { AuthModule } from './shared/auth/auth.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DashboardModule,
     FontAwesomeModule,
     LayoutModule,
-    AuthModule
+    AuthModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
