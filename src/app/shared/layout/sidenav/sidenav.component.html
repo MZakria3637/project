@@ -1,10 +1,9 @@
-<div style="padding: 20px;">
-    <ul class="nav nav-sidebar">
-        <li *ngFor="let menuItem of menuItems" [ngClass]="{'active': menuItem.isActive}">
-            <a [routerLink]='[menuItem.url]'>
-                <i class="fa fa-{{menuItem.icon}}"></i>
-                {{menuItem.text}}
-            </a>
-        </li>
-    </ul>
-</div>
+<ul class="nav navbar navbar-nav nav-sidebar flex-nowrap p-4">
+    <li *ngFor="let menuItem of menuItems" class="w-100" [ngClass]="{'active': menuItem.isActive}">
+        <a [routerLink]='[menuItem.url]' class="w-100">
+            <i class="fa fa-{{menuItem.icon}}"></i>
+            {{menuItem.text}}
+            <span class="badge">2</span>
+        </a>
+    </li>
+</ul>
