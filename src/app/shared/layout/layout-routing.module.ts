@@ -15,6 +15,10 @@ const LayoutRoutes: Routes = [
   {
     path: 'cases',
     loadChildren: () => import('src/app/cases/cases.module').then(m => m.CasesModule)
+  },
+  {
+    path: 'contacts',
+    loadChildren: () => import('src/app/contacts/contacts.module').then(m => m.ContactsModule)
   }
 ]
 
