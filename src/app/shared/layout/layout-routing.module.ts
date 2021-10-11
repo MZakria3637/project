@@ -38,6 +38,14 @@ const LayoutRoutes: Routes = [
   {
     path: "accounts",
     loadChildren:()=>import('src/app/accounts/accounts.module').then(m=>m.AccountsModule)
+  },
+  {
+    path: "consultations",
+    loadChildren:()=>import('src/app/consultations/consultations.module').then(m=>m.ConsultationsModule)
+  },
+  {
+    path: "reports",
+    loadChildren:()=>import('src/app/reports/reports.module').then(m=>m.ReportsModule)
   }
 ]
 

@@ -14,11 +14,16 @@ const SideNavItems = [
     {
         url: 'cases/new',
         text: 'New Case',
-        icon: 'user'
+        icon: 'plus-square'
     },
     {
         url: 'cases',
         text: 'Clients & Cases',
+        icon: 'user'
+    },
+    {
+        url: 'consultations',
+        text: 'Consultations',
         icon: 'comments-o'
     },
     {
@@ -63,6 +68,7 @@ const SideNavItems = [
         text: 'Reports',
         icon: 'line-chart'
     },
+   
 ]
 
 export default SideNavItems;
