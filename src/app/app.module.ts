@@ -8,9 +8,11 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LayoutModule } from './shared/layout/layout.module';
 import { AuthModule } from './shared/auth/auth.module';
+import { ConsultationsComponent } from './consultations/consultations.component';
+import { ConsultationsModule } from './consultations/consultations.module';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ConsultationsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -18,6 +20,7 @@ import { AuthModule } from './shared/auth/auth.module';
     FontAwesomeModule,
     LayoutModule,
     AuthModule,
+    ConsultationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -44,9 +44,21 @@ const LayoutRoutes: Routes = [
       import('src/app/tasks/tasks.module').then((m) => m.TasksModule),
   },
   {
+    path: 'reports',
+    loadChildren: () =>
+      import('src/app/reports/reports.module').then((m) => m.ReportsModule),
+  },
+  {
     path: 'accounts',
     loadChildren: () =>
       import('src/app/accounts/accounts.module').then((m) => m.AccountsModule),
+  },
+  {
+    path: 'consultations',
+    loadChildren: () =>
+      import('src/app/consultations/consultations.module').then(
+        (m) => m.ConsultationsModule
+      ),
   },
   {
     path: 'reports',
