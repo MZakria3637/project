@@ -467,9 +467,6 @@ table .nav .open > a:hover {
   border-color: 0 none #fff;
 }
 
-table .dropdown-menu {
-}
-
 table .glyphicon-option-vertical,
 table .glyphicon-option-horizontal {
   color: #ff6600;
@@ -642,8 +639,6 @@ table .dropdown-menu > li > a:hover {
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
-  }
-  .sidenav a {
   }
 }
 
@@ -1178,10 +1173,6 @@ a.block_gray:focus {
   border: 2px solid #78b41e;
   color: #fff;
 }
-
-.nav > li > a {
-}
-
 .nav > li > a:focus,
 .nav > li > a:hover {
   background-color: transparent;
@@ -1195,9 +1186,6 @@ a.block_gray:focus {
   background-color: #2b323a;
 }
 
-.sidebar {
-  /*display: none;*/
-}
 
 .sidebar a {
   border-bottom: 1px solid #222222;
@@ -1495,8 +1483,6 @@ table .btn {
 }
 */
 
-.table > thead > tr > th {
-}
 
 /*
 table .btn {
@@ -1573,9 +1559,6 @@ table.table-striped {
   border-bottom: 2px solid #ddd;
 }
 
-table td {
-  /* vertical-align: top; */
-}
 
 table td.nobordertd {
   border: 0 none !important;
@@ -1693,9 +1676,6 @@ a.td_link:focus {
 
 .hideme {
   display: none;
-}
-
-.steps {
 }
 
 .progress {
@@ -1891,10 +1871,6 @@ a.btn-default:focus {
   padding: 0 20px;
 }
 
-#search_form input.dpicker,
-.bt_datepicker {
-}
-
 .large-icon {
   font-size: 18px;
   color: #000;
@@ -2065,10 +2041,6 @@ a.btn-default:focus {
 }
 
 @media print {
-  .navbar-fixed-top,
-  .sidebar {
-    /* display: none !important; */
-  }
   .col-sm-9 {
     margin: 0 !important;
     width: 100% !important;
@@ -2639,12 +2611,6 @@ a.btn-default:focus {
   border-top: 1px solid #353535;
 }
 
-.modal-left .modal-content ul li a::before {
-  /* content: "★"; 
-   margin-right: 5px;
-   */
-}
-
 .modal-left .modal-content ul li a:hover,
 .modal-left .modal-content ul li a:focus,
 .modal-left .modal-content ul li a:active,
@@ -2680,9 +2646,6 @@ a.btn-default:focus {
 /* MOBILE MENU - MODAL WINDOW [END] */
 
 /* MOBILE TABS [START] */
-
-.tile {
-}
 
 #tile-1 .tab-pane {
   padding: 15px 0;
@@ -10822,35 +10785,30 @@ button.close {
 }
 
 .fa-rotate-90 {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 
 .fa-flip-vertical {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
