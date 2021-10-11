@@ -19,6 +19,25 @@ const LayoutRoutes: Routes = [
   {
     path: 'contacts',
     loadChildren: () => import('src/app/contacts/contacts.module').then(m => m.ContactsModule)
+  },
+  {
+    path: "receipts",
+    loadChildren:()=>import('src/app/receipts/receipts.module').then(m=>m.ReceiptsModule)
+  },
+  {
+    path: 'logs',
+  loadChildren:()=>import('src/app/logs/logs.module').then(m=>m.LogsModule)  
+  },
+  {
+    path: 'keydates',
+    loadChildren:()=>import('src/app/keydates/keydates.module').then(m=>m.KeydatesModule)
+  }, {
+    path: "tasks",
+    loadChildren:()=>import('src/app/tasks/tasks.module').then(m=>m.TasksModule)
+  },
+  {
+    path: "accounts",
+    loadChildren:()=>import('src/app/accounts/accounts.module').then(m=>m.AccountsModule)
   }
 ]
 
