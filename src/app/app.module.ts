@@ -10,6 +10,7 @@ import { LayoutModule } from './shared/layout/layout.module';
 import { AuthModule } from './shared/auth/auth.module';
 import { ConsultationsComponent } from './consultations/consultations.component';
 import { ConsultationsModule } from './consultations/consultations.module';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [AppComponent, ConsultationsComponent],
@@ -21,6 +22,7 @@ import { ConsultationsModule } from './consultations/consultations.module';
     LayoutModule,
     AuthModule,
     ConsultationsModule,
+    HighchartsChartModule
   ],
   providers: [],
   bootstrap: [AppComponent],
