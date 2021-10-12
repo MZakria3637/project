@@ -12,9 +12,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.caseChartOpt = {
       title: { text: 'My cases in 2021', style: { color: '#363636' } },
-      chart: {
-        width: '1200',
-      },
       tooltip: {
         animation: true,
         backgroundColor: 'rgba(255, 255, 255, .85)',
