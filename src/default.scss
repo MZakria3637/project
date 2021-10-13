@@ -113,7 +113,6 @@ i.dot {
   font-size: 24px;
 }
 
-
 #page_list li.drag2 {
   padding: 5px !important;
   border: 0 none #e5e5e5 !important;
@@ -231,6 +230,12 @@ form p.desc {
   padding-right: 15px;
   padding-left: 15px;
   padding-bottom: 100px;
+}
+
+@media (min-width: 992px) {
+  .main {
+    margin-left: 16.6667% !important;
+  }
 }
 
 ul.dropdown-menu hr {
@@ -1186,7 +1191,6 @@ a.block_gray:focus {
   background-color: #2b323a;
 }
 
-
 .sidebar a {
   border-bottom: 1px solid #222222;
   border-right: 5px solid #222222;
@@ -1483,7 +1487,6 @@ table .btn {
 }
 */
 
-
 /*
 table .btn {
     border-radius: 15px;
@@ -1558,7 +1561,6 @@ table {
 table.table-striped {
   border-bottom: 2px solid #ddd;
 }
-
 
 table td.nobordertd {
   border: 0 none !important;
@@ -1920,13 +1922,14 @@ a.btn-default:focus {
 @media (min-width: 768px) {
   .sidebar {
     background-color: #292929;
+    top: 50px;
     bottom: 0;
     display: block;
     left: 0;
     overflow-x: hidden;
     overflow-y: auto;
     padding: 0;
-    position: fixed;
+    position: fixed !important;
   }
   .modal-sm {
     width: 400px;

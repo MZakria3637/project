@@ -22,23 +22,45 @@ export class DashboardComponent implements OnInit {
 
   outcomeChart: typeof Highcharts = Highcharts;
   outcomeChartOpt!: Highcharts.Options;
+  outcomeData: {
+    outcome_positive: number,
+    outcome_negative: number,
+    outcome_neutral: number,
+  } = {
+    outcome_positive: 40,
+    outcome_negative: 20,
+    outcome_neutral: 40
+  }
+
+  successChart: typeof Highcharts = Highcharts;
+  successChartOpt!: Highcharts.Options;
+  successData: {
+    objectiveMet: number,
+    objectiveNotMet: number,
+    instructionsWithdrawn: number,
+    noFurtherInstructions: number
+  } = {
+    objectiveMet: 100,
+    objectiveNotMet: 0,
+    instructionsWithdrawn: 0,
+    noFurtherInstructions: 0
+  }
+
   ngOnInit(): void {
     this.caseChartInit();
   }
   caseChartInit() {
     this.caseChartOpt = {
       title: {
-        text: `My cases in ${this.selectedYear}`,
-        style: { color: '#363636' },
+        text: `My Cases in ${this.selectedYear}`,
+        style: {
+          color: '#292929',
+          fontSize: '18px',
+          fontweight: 'bold',
+        }
       },
       tooltip: {
-        animation: true,
-        backgroundColor: 'rgba(255, 255, 255, .85)',
-        borderRadius: 3,
-        borderWidth: 1,
-        enabled: true,
         headerFormat: `<div class="w-100" style="font-size:12px">{point.key} ${this.selectedYear}</div>`,
-        shadow: true,
         useHTML: true,
       },
       xAxis: {
@@ -53,71 +75,10 @@ export class DashboardComponent implements OnInit {
           },
         },
       },
-      lang: {
-        loading: 'Loading...',
-        decimalPoint: '.',
-        numericSymbols: ['k', 'M', 'G', 'T', 'P', 'E'],
-        resetZoom: 'Reset zoom',
-        resetZoomTitle: 'Reset zoom level 1:1',
-        thousandsSep: ',',
-        printChart: 'Print chart',
-        downloadPNG: 'Download PNG image',
-        downloadJPEG: 'Download JPEG image',
-        downloadPDF: 'Download PDF document',
-        downloadSVG: 'Download SVG vector image',
-        contextButtonTitle: 'Chart context menu',
-      },
-      exporting: {
-        type: 'image/png',
-        url: 'http://export.highcharts.com/',
-        buttons: {
-          contextButton: {
-            symbol: 'menu',
-            titleKey: 'contextButtonTitle',
-          
-            menuItems: [
-              'printChart',
-              'separator',
-              'downloadPNG',
-              'downloadJPEG',
-              'downloadPDF',
-              'downloadSVG',
-            ],
-          },
-        },
-      },
-      navigation: {
-        menuStyle: {
-          border: '1px solid #A0A0A0',
-          background: '#FFFFFF',
-          padding: '5px 0',
-        },
-        menuItemStyle: {
-          padding: '10px',
-          background: 'none',
-          color: '#303030',
-          fontSize: '11px',
-        },
-        menuItemHoverStyle: {
-          background: '#4572A5',
-          color: '#FFFFFF',
-        },
-        buttonOptions: {
-          symbolFill: '#E0E0E0',
-          symbolSize: 14,
-          symbolStroke: '#666',
-          symbolStrokeWidth: 3,
-          symbolX: 12.5,
-          symbolY: 10.5,
-          align: 'right',
-          buttonSpacing: 3,
-          height: 22,
-          theme: {
-            fill: 'white',
-            stroke: 'none',
-          },
-          verticalAlign: 'top',
-          width: 24,
+      plotOptions: {
+        column: {
+          pointPadding: 0.1,
+          borderWidth: 0,
         },
       },
       series: [
@@ -132,6 +93,114 @@ export class DashboardComponent implements OnInit {
           data: this.newMatters,
           name: 'New Matters',
           color: '#363636',
+        },
+      ],
+    };
+
+    this.outcomeChartOpt = {
+      chart: {
+        plotShadow: false,
+      },
+      title: {
+        text: 'My Cases (Outcomes)',
+        align: 'left',
+        style: {
+          color: '#292929',
+          fontSize: '18px',
+          fontweight: 'bold',
+        }
+      },
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+            enabled: false,
+          },
+          showInLegend: true,
+        },
+      },
+      series: [
+        {
+          type: 'pie',
+          name: 'Percentage',
+          data: [
+            {
+              name: 'Outcome Positive',
+              y: this.outcomeData.outcome_positive,
+              sliced: true,
+              selected: true,
+              color: '#78B41E'
+            },
+            {
+              name: 'Outcome Negative',
+              y: this.outcomeData.outcome_negative,
+              color: '#363636',
+            },
+            {
+              name: 'Outcome Neutral',
+              y: this.outcomeData.outcome_neutral,
+              color: '#DE1771'
+            },
+          ],
+        },
+      ],
+    };
+    
+    this.successChartOpt = {
+      title: {
+        text: 'My Cases (Results)',
+        align: 'left',
+        style: {
+          color: '#292929',
+          fontSize: '18px',
+          fontweight: 'bold',
+        }
+      },
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+            enabled: false,
+          },
+          showInLegend: true,
+        },
+      },
+      series: [
+        {
+          type: 'pie',
+          name: 'Percentage',
+          data: [
+            {
+              name: 'Objective Met',
+              y: this.successData.objectiveMet,
+              sliced: true,
+              selected: true,
+              color: '#78B41E'
+            },
+            {
+              name: 'Objective Not Met',
+              y: this.successData.objectiveNotMet,
+              color: '#363636',
+            },
+            {
+              name: 'Instructions Withdrawn',
+              y: this.successData.instructionsWithdrawn,
+              color: '#DE1771'
+            },
+            {
+              name: 'No Further Instructions',
+              y: this.successData.noFurtherInstructions,
+              color: '#FFBA00'
+            },
+          ],
         },
       ],
     };
