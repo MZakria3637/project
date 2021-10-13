@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
-    HighchartsChartModule
+    HighchartsChartModule,
   ]
 })
 export class DashboardModule { }

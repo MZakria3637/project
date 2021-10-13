@@ -59,6 +59,9 @@ export class DashboardComponent implements OnInit {
           fontweight: 'bold',
         }
       },
+      credits :{
+        enabled: false
+      },
       tooltip: {
         headerFormat: `<div class="w-100" style="font-size:12px">{point.key} ${this.selectedYear}</div>`,
         useHTML: true,
@@ -110,6 +113,9 @@ export class DashboardComponent implements OnInit {
           fontweight: 'bold',
         }
       },
+      credits: {
+        enabled: false
+      },
       tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
       },
@@ -159,6 +165,9 @@ export class DashboardComponent implements OnInit {
           fontSize: '18px',
           fontweight: 'bold',
         }
+      },
+      credits: {
+        enabled: false
       },
       tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',

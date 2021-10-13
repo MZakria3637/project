@@ -11,6 +11,7 @@ import { AuthModule } from './shared/auth/auth.module';
 import { ConsultationsComponent } from './consultations/consultations.component';
 import { ConsultationsModule } from './consultations/consultations.module';
 import { HighchartsChartModule } from 'highcharts-angular';
+import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent, ConsultationsComponent],
@@ -22,7 +23,9 @@ import { HighchartsChartModule } from 'highcharts-angular';
     LayoutModule,
     AuthModule,
     ConsultationsModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    NgbModule,
+    NgbDropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent],

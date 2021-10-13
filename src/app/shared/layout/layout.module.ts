@@ -16,6 +16,7 @@ import { ReceiptsModule } from 'src/app/receipts/receipts.module';
 import { AccountsModule } from 'src/app/accounts/accounts.module';
 import { LogsModule } from 'src/app/logs/logs.module';
 import { ReportsModule } from 'src/app/reports/reports.module';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { ReportsModule } from 'src/app/reports/reports.module';
     AccountsModule,
     LogsModule,
     ReportsModule,
+    NgbDropdownModule
   ]
 })
 export class LayoutModule { }

@@ -1,11 +1,9 @@
-<div style="padding: 20px 7.5px;">
-    <ul class="nav nav-sidebar">
-        <li *ngFor="let menuItem of menuItems" class="w-100" [ngClass]="{'active': checkActive(menuItem.url)}">
-            <a [routerLink]='[menuItem.url]' class="w-100">
-                <i class="fa fa-{{menuItem.icon}}"></i>
-                {{menuItem.text}}
-                <span *ngIf="menuItem.badge" class="badge">{{menuItem?.badge}}</span>
-            </a>
-        </li>
-    </ul>
-</div>
+<ul class="nav">
+    <li *ngFor="let menuItem of menuItems">
+        <a [routerLink]='[menuItem.url]' [ngClass]="{'active': checkActive(menuItem.url)}">
+            <i class="fa fa-{{menuItem.icon}}"></i>
+            {{menuItem.text}}
+            <span *ngIf="menuItem.badge" class="badge pull-right">{{menuItem?.badge}}</span>
+        </a>
+    </li>
+</ul>

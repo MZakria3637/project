@@ -1,6 +1,4 @@
-<div class="row">
-  <div class="col-md-12" id="pg-title">Dashboard</div>
-</div>
+<h1 id="pg-title">Dashboard</h1>
 <div class="row">
   <div class="col-md-12">
     <div class="widget">
@@ -95,7 +93,7 @@
             <h5 style="margin-bottom: 20px;">My Cases</h5>
           </div>
           <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 toolbar">
-            <strong>YEAR:</strong>
+            <strong class="lw-fs-15 lw-mr-10">YEAR:</strong>
             <select [(ngModel)]="selectedYear" class="min-select" (ngModelChange)="changeYear()">
               <option *ngFor="let year of registrationYears" [value]="year">{{year}}</option>
             </select>
