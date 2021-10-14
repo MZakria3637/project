@@ -15,7 +15,8 @@ import { StepsComponent } from './steps/steps.component';
   imports: [
     CommonModule,
     NewCaseRoutingModule,
-    NgbDropdownModule
+    NgbDropdownModule,
+    
   ]
 })
 export class NewCaseModule { }
