@@ -1,19 +1,17 @@
-@import "~bootstrap/scss/bootstrap";
-@import url("default.scss");
-@import url("fa.scss");
+// @import "~bootstrap/scss/bootstrap";
+// @import url("default.scss");
+// @import url("fa.scss");
 @font-face {
   font-family: "Glyphicons Halflings";
-  src: url("https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.eot");
-  src: url("https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.eot?#iefix")
+  src: url("assets/fonts/glyphicons-halflings-regular.eot");
+  src: url("assets/fonts/glyphicons-halflings-regular.eot?#iefix")
       format("embedded-opentype"),
-    url("https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.woff2")
+    url("assets/fonts/glyphicons-halflings-regular.woff2")
       format("woff2"),
-    url("https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.woff")
+    url("assets/fonts/glyphicons-halflings-regular.woff")
       format("woff"),
-    url("https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.ttf")
-      format("truetype"),
-    url("https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular")
-      format("svg");
+    url("assets/fonts/glyphicons-halflings-regular.ttf")
+      format("truetype");
 }
 * {
   box-sizing: border-box;
@@ -162,17 +160,28 @@
   float: left;
 }
 [ngbdropdownmenu] {
-  top: 48px !important;
-  & > li > a {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 3px 20px 3px 0;
-    clear: both;
-    font-weight: 400;
-    line-height: 1.42857143;
-    color: #333 !important;
-    white-space: nowrap;
+  .lw-header & {
+    top: 48px !important;
+  }
+  & > li {
+    &:active {
+      background-color: unset;
+    }
+    & > a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 20px 3px 0;
+      clear: both;
+      font-weight: 400;
+      line-height: 1.42857143;
+      color: #333 !important;
+      white-space: nowrap;
+      text-decoration: none;
+      &:hover, &:active, &:focus {
+        text-decoration: none;
+      }
+    }
   }
 }
 

@@ -3,21 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { CasesRoutingModule } from './cases-routing.module';
 import { CasesComponent } from './cases.component';
-import { ActivitiesComponent } from './components/activities/activities.component';
-import { NewCaseComponent } from './components/new-case/new-case.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  declarations: [
-    CasesComponent,
-    ActivitiesComponent,
-    NewCaseComponent,
-  ],
+  declarations: [CasesComponent],
   imports: [
     CommonModule,
     CasesRoutingModule,
-    ReactiveFormsModule
-  ]
+    NgbDropdownModule,
+    ReactiveFormsModule,
+  ],
 })
-export class CasesModule { }
+export class CasesModule {}

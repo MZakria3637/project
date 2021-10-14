@@ -12,6 +12,9 @@ import { ConsultationsComponent } from './consultations/consultations.component'
 import { ConsultationsModule } from './consultations/consultations.module';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NewCaseModule } from './new-case/new-case.module';
+import { CaseActivitiesModule } from './case-activities/case-activities.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent, ConsultationsComponent],
@@ -25,7 +28,10 @@ import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ConsultationsModule,
     HighchartsChartModule,
     NgbModule,
-    NgbDropdownModule
+    NgbDropdownModule,
+    NewCaseModule,
+    CaseActivitiesModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -4,11 +4,11 @@ import { ActivatedRoute } from '@angular/router';
 import * as moment from 'moment';
 
 @Component({
-  selector: 'app-activities',
-  templateUrl: './activities.component.html',
-  styleUrls: ['./activities.component.scss']
+  selector: 'case-activities',
+  templateUrl: './case-activities.component.html',
+  styleUrls: ['./case-activities.component.scss']
 })
-export class ActivitiesComponent implements OnInit {
+export class CaseActivitiesComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private fb: FormBuilder) { }
 

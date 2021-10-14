@@ -12,7 +12,7 @@ const SideNavItems = [
         icon: 'calendar'
     },
     {
-        url: 'cases/new',
+        url: 'new-case',
         text: 'New Case',
         icon: 'plus-square'
     },
@@ -27,7 +27,7 @@ const SideNavItems = [
         icon: 'comments-o'
     },
     {
-        url: 'cases/activities/'+ moment(new Date).format('DD-MM-YYYY'),
+        url: 'case-activities/'+ moment(new Date).format('DD-MM-YYYY'),
         text: 'Case Activities',
         icon: 'edit'
     },
