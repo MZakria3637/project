@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-steps',
@@ -7,11 +8,29 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./steps.component.scss']
 })
 export class StepsComponent implements OnInit {
-  constructor(private route: ActivatedRoute) { }
-
+  constructor(private route: ActivatedRoute, private router: Router, private fb: FormBuilder) { }
+  stepForm!: FormGroup;
   ngOnInit(): void {
     this.route.params.subscribe(({step}) => {
-      this.setNavigation(parseInt(step.replace(/^\D+/g, "")))
+      let num = parseInt(step.replace(/^\D+/g, ""));
+      if (num > 0 && num < 5) {
+        this.setNavigation(num)
+        switch (num) {
+          case 1: {
+            this.stepForm = this.fb.group({
+              title: [0],
+              first_name: ['', Validators.required],
+              last_name: ['', Validators.required],
+              DOB: [''],
+              gender: [''],
+              nationality: [0],
+
+            })
+          }
+        }
+      } else {
+        this.router.navigate(["dashboard"])
+      }
     })
   }
 

@@ -6,7 +6,6 @@ import { NewCaseComponent } from './new-case.component';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { StepsComponent } from './steps/steps.component';
 
-
 @NgModule({
   declarations: [
     NewCaseComponent,

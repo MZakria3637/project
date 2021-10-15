@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AccountsRoutingModule } from './accounts-routing.module';
 import { AccountsComponent } from './accounts.component';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { AccountsComponent } from './accounts.component';
   ],
   imports: [
     CommonModule,
-    AccountsRoutingModule
+    AccountsRoutingModule,
+    HighchartsChartModule
   ]
 })
 export class AccountsModule { }
